@@ -22,7 +22,10 @@ ul{
     list-style: none;
 }
 li{
-    margin: 0 5px;
+    margin: 0 8px;
+    padding: 5px;
+    text-transform: capitalize;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 /* UTILITIES */

@@ -21,36 +21,51 @@ Esegui questo programma in due versioni, con il for e con il while
 Snack 2
 Inserisci un numero, se è pari stampa il numero, se è dispari stampa il numero successivo
 */
-var numero = parseInt(prompt('Inserisci un numero'));
+// var numero = parseInt(prompt('Inserisci un numero'));
 
-if(numero % 2 === 0){
-    console.log('Il numero è pari:', numero);
-    document.getElementById('snack-2-number').innerHTML = 'Il numero è pari: ' + numero;
-} else{
-    document.getElementById('snack-2-number').innerHTML = 'Il numero è dispari. Stampo quello successivo: ' + (numero + 1);
+// if(numero % 2 === 0){
+//     console.log('Il numero è pari:', numero);
+//     document.getElementById('snack-2-number').innerHTML = 'Il numero è pari: ' + numero;
+// } else{
+//     document.getElementById('snack-2-number').innerHTML = 'Il numero è dispari. Stampo quello successivo: ' + (numero + 1);
 
-    console.log('Il numero è dispari. Stampo quello successivo:', numero + 1 );
-}
+//     console.log('Il numero è dispari. Stampo quello successivo:', numero + 1 );
+// }
 
 /* 
 Snack 3
 Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una lista di cognomi, Gatsby vuole generare una falsa lista di 3 invitati.
 */
-// var firstNames = ['marco', 'paolo', 'giovanni', 'andrea', 'manuel'];
-// console.log(firstNames);
-// var lastNames = ['rossi', 'verdi', 'bianchi', 'bagnasco', 'duzioni'];
-// console.log(lastNames);
+var firstNames = ['marco', 'paolo', 'giovanni', 'andrea', 'manuel'];
+var items = '';
+for(var i = 0; i < firstNames.length; i++){
+    items += '<li>' + firstNames[i] + '</li>';
+}
+document.getElementById('snack-3-firstname-list').innerHTML = items;
+console.log(firstNames);
 
-// var guest = [];
-// var size = 3;
+var lastNames = ['rossi', 'verdi', 'bianchi', 'bagnasco', 'duzioni'];
+items = '';
+for(var i = 0; i < lastNames.length; i++){
+    items += '<li>' + lastNames[i] + '</li>';
+}
+document.getElementById('snack-3-lastname-list').innerHTML = items;
+console.log(lastNames);
 
-// for(var i = 0; i < size; i++){
-//     var fullName = firstNames[Math.floor(Math.random() * firstNames.length)] + ' ' + lastNames[Math.floor(Math.random() * lastNames.length)];
-//     if(!guest.includes(fullName)){
-//         guest.push(fullName);
-//     }
-// }
-// console.log(guest);
+var guest = [];
+var size = 3;
+items = '';
+for(var i = 0; i < size; i++){
+    var fullName = firstNames[Math.floor(Math.random() * firstNames.length)] + ' ' + lastNames[Math.floor(Math.random() * lastNames.length)];
+    if(!guest.includes(fullName)){
+        guest.push(fullName);
+        items += '<li>' + fullName + '</li>';
+    } else{
+        i--;
+    }
+}
+document.getElementById('snack-3-guest-list').innerHTML = items;
+console.log(guest);
 
 /* 
 Snack 4
