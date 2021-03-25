@@ -36,52 +36,58 @@ Inserisci un numero, se è pari stampa il numero, se è dispari stampa il numero
 Snack 3
 Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una lista di cognomi, Gatsby vuole generare una falsa lista di 3 invitati.
 */
-var firstNames = ['marco', 'paolo', 'giovanni', 'andrea', 'manuel'];
-var items = '';
-for(var i = 0; i < firstNames.length; i++){
-    items += '<li>' + firstNames[i] + '</li>';
-}
-document.getElementById('snack-3-firstname-list').innerHTML = items;
-console.log(firstNames);
+// var firstNames = ['marco', 'paolo', 'giovanni', 'andrea', 'manuel'];
+// var items = '';
+// for(var i = 0; i < firstNames.length; i++){
+//     items += '<li>' + firstNames[i] + '</li>';
+// }
+// document.getElementById('snack-3-firstname-list').innerHTML = items;
+// console.log(firstNames);
 
-var lastNames = ['rossi', 'verdi', 'bianchi', 'bagnasco', 'duzioni'];
-items = '';
-for(var i = 0; i < lastNames.length; i++){
-    items += '<li>' + lastNames[i] + '</li>';
-}
-document.getElementById('snack-3-lastname-list').innerHTML = items;
-console.log(lastNames);
+// var lastNames = ['rossi', 'verdi', 'bianchi', 'bagnasco', 'duzioni'];
+// items = '';
+// for(var i = 0; i < lastNames.length; i++){
+//     items += '<li>' + lastNames[i] + '</li>';
+// }
+// document.getElementById('snack-3-lastname-list').innerHTML = items;
+// console.log(lastNames);
 
-var guest = [];
-var size = 3;
-items = '';
-for(var i = 0; i < size; i++){
-    var fullName = firstNames[Math.floor(Math.random() * firstNames.length)] + ' ' + lastNames[Math.floor(Math.random() * lastNames.length)];
-    if(!guest.includes(fullName)){
-        guest.push(fullName);
-        items += '<li>' + fullName + '</li>';
-    } else{
-        i--;
-    }
-}
-document.getElementById('snack-3-guest-list').innerHTML = items;
-console.log(guest);
+// var guest = [];
+// var size = 3;
+// items = '';
+// for(var i = 0; i < size; i++){
+//     var fullName = firstNames[Math.floor(Math.random() * firstNames.length)] + ' ' + lastNames[Math.floor(Math.random() * lastNames.length)];
+//     if(!guest.includes(fullName)){
+//         guest.push(fullName);
+//         items += '<li>' + fullName + '</li>';
+//     } else{
+//         i--;
+//     }
+// }
+// document.getElementById('snack-3-guest-list').innerHTML = items;
+// console.log(guest);
 
 /* 
 Snack 4
 Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari
 */
-// var numbers = [5, 6, 89, 36, 7, 8, 2, 45, 222, 456];
-// console.log(numbers);
+var numbers = [5, 6, 89, 36, 7, 8, 2, 45, 222, 456];
+var items = '';
+for(var i = 0; i < numbers.length; i++){
+    items += '<li>' + numbers[i] + '</li>';
+}
+document.getElementById('snack-4-list').innerHTML = items;
+console.log(numbers);
 
-// var sum = 0;
+var sum = 0;
 
-// for(var i = 0; i < numbers.length; i++){
-//     if(i % 2 != 0){
-//         sum += numbers[i]
-//     }
-// }
-// console.log(sum);
+for(var i = 0; i < numbers.length; i++){
+    if(i % 2 != 0){
+        sum += numbers[i]
+    }
+}
+document.getElementById('snack-4-sum').innerHTML = sum;
+console.log(sum);
 
 /* 
 Snack 5 - Bonus
