@@ -49,14 +49,38 @@ Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una list
 Snack 4
 Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari
 */
-var numbers = [5, 6, 89, 36, 7, 8, 2, 45, 222, 456];
-console.log(numbers);
+// var numbers = [5, 6, 89, 36, 7, 8, 2, 45, 222, 456];
+// console.log(numbers);
 
-var sum = 0;
+// var sum = 0;
 
-for(var i = 0; i < numbers.length; i++){
-    if(i % 2 != 0){
-        sum += numbers[i]
-    }
+// for(var i = 0; i < numbers.length; i++){
+//     if(i % 2 != 0){
+//         sum += numbers[i]
+//     }
+// }
+// console.log(sum);
+
+/* 
+Snack 5 - Bonus
+Crea due array di numeri che hanno un numero di elementi diversi.
+Aggiungi elementi all’array che ha meno elementi fino a quando ne avrà tanti quanti l’altro.
+*/
+var array1 = [2, 56, 78, 49, 1, 50, 47]
+console.log(array1);
+var array2 = [4, 77, 1]
+console.log(array2);
+
+var greater = array1;
+var smaller = array2;
+
+if(array1.length < array2.length){
+    greater = array2;
+    smaller = array1; 
 }
-console.log(sum);
+
+while(smaller.length < greater.length){
+    smaller.push(Math.floor(Math.random() * 100));
+}
+console.log(array1);
+console.log(array2);
