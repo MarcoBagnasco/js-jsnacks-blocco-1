@@ -19,6 +19,7 @@ h2{
 ul{
     display: flex;
     justify-content: center;
+    margin-bottom: 10px;
     list-style: none;
 }
 li{
