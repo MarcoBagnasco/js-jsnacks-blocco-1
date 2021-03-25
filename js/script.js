@@ -29,18 +29,34 @@ Inserisci un numero, se è pari stampa il numero, se è dispari stampa il numero
 Snack 3
 Generatore di “nomi cognomi” casuali: prendendo una lista di nomi e una lista di cognomi, Gatsby vuole generare una falsa lista di 3 invitati.
 */
-var firstNames = ['marco', 'paolo', 'giovanni', 'andrea', 'manuel'];
-console.log(firstNames);
-var lastNames = ['rossi', 'verdi', 'bianchi', 'bagnasco', 'duzioni'];
-console.log(lastNames);
+// var firstNames = ['marco', 'paolo', 'giovanni', 'andrea', 'manuel'];
+// console.log(firstNames);
+// var lastNames = ['rossi', 'verdi', 'bianchi', 'bagnasco', 'duzioni'];
+// console.log(lastNames);
 
-var guest = [];
-var size = 3;
+// var guest = [];
+// var size = 3;
 
-for(var i = 0; i < size; i++){
-    var fullName = firstNames[Math.floor(Math.random() * firstNames.length)] + ' ' + lastNames[Math.floor(Math.random() * lastNames.length)];
-    if(!guest.includes(fullName)){
-        guest.push(fullName);
+// for(var i = 0; i < size; i++){
+//     var fullName = firstNames[Math.floor(Math.random() * firstNames.length)] + ' ' + lastNames[Math.floor(Math.random() * lastNames.length)];
+//     if(!guest.includes(fullName)){
+//         guest.push(fullName);
+//     }
+// }
+// console.log(guest);
+
+/* 
+Snack 4
+Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari
+*/
+var numbers = [5, 6, 89, 36, 7, 8, 2, 45, 222, 456];
+console.log(numbers);
+
+var sum = 0;
+
+for(var i = 0; i < numbers.length; i++){
+    if(i % 2 != 0){
+        sum += numbers[i]
     }
 }
-console.log(guest);
+console.log(sum);
