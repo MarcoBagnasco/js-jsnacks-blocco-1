@@ -4,14 +4,18 @@ Il software deve chiedere per 5 volte all’utente di inserire un numero.
 Il programma stampa la somma di tutti i numeri inseriti.
 Esegui questo programma in due versioni, con il for e con il while
  */
-// var request = 5;
-// var sum = 0;
-// for(var i = 1; i <= request;i++){
-//     var number = parseInt(prompt('Inserisci numero ' + i + ' di ' + request));
-//     console.log(number);
-//     sum += number;
-// }
-// console.log('Il totale dei numeri inseriti è:', sum);
+var request = 5;
+var sum = 0;
+var items = '';
+for(var i = 1; i <= request;i++){
+    var number = parseInt(prompt('Inserisci numero ' + i + ' di ' + request));
+    console.log(number);
+    sum += number;
+    items += '<li>' + number + '</li>';
+}
+document.getElementById('snack-1-list').innerHTML = items;
+document.getElementById('snack-1-sum').innerHTML = sum;
+console.log('Il totale dei numeri inseriti è:', sum);
 
 /* 
 Snack 2
@@ -66,21 +70,21 @@ Snack 5 - Bonus
 Crea due array di numeri che hanno un numero di elementi diversi.
 Aggiungi elementi all’array che ha meno elementi fino a quando ne avrà tanti quanti l’altro.
 */
-var array1 = [2, 56, 78, 49, 1, 50, 47]
-console.log(array1);
-var array2 = [4, 77, 1]
-console.log(array2);
+// var array1 = [2, 56, 78, 49, 1, 50, 47]
+// console.log(array1);
+// var array2 = [4, 77, 1]
+// console.log(array2);
 
-var greater = array1;
-var smaller = array2;
+// var greater = array1;
+// var smaller = array2;
 
-if(array1.length < array2.length){
-    greater = array2;
-    smaller = array1; 
-}
+// if(array1.length < array2.length){
+//     greater = array2;
+//     smaller = array1; 
+// }
 
-while(smaller.length < greater.length){
-    smaller.push(Math.floor(Math.random() * 100));
-}
-console.log(array1);
-console.log(array2);
+// while(smaller.length < greater.length){
+//     smaller.push(Math.floor(Math.random() * 100));
+// }
+// console.log(array1);
+// console.log(array2);

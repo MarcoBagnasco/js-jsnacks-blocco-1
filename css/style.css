@@ -1,0 +1,58 @@
+/* GENERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding-top: 100px;
+    font-size: 24px;
+    text-align: center;
+}
+section{
+    padding: 20px;
+}
+h2{
+    margin-bottom: 20px;
+    font-style: italic;
+}
+ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+li{
+    margin: 0 5px;
+}
+
+/* UTILITIES */
+.bg-green
+{
+    background-color: #228B22;
+}
+.bg-red
+{
+    background-color: #FF6347;
+}
+.bg-aqua
+{
+    background-color: #7FFFD4;
+}
+.bg-yellow
+{
+    background-color: #DAA520;
+}
+.bg-violet
+{
+    background-color: #EE82EE;
+}
+
+/* APP HEADER */
+.app-header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100px;
+    line-height: 100px;
+    background-color: #777;
+}
